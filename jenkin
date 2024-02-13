@@ -1,0 +1,11 @@
+pipeline {
+  agent any
+  stages {
+    stage("download code"){
+      steps{
+        git "https://github.com/ramkumarvaddi/jenkinsfile.git"
+      }
+    }
+}
+}
+  
