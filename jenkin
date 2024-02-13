@@ -10,5 +10,13 @@ pipeline
                 git "https://github.com/ramkumarvaddi/jenkinsfile.git"
             }
         }
+stage('countbuild')
+        {
+            steps
+            {
+                sh 'mvn package'
+            }
+        }
+        
     }
 }
