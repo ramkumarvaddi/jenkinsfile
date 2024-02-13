@@ -34,6 +34,13 @@ stage('countTest')
                
             }
         }
+stage('countDellivery')
+        {
+            steps
+            {
+               deploy adapters: [tomcat9(credentialsId: '4bb34d9c-6c43-4110-bbc1-8cf0f820367d', path: '', url: 'http://172.31.39.248:8080')], contextPath: 'ram', war: '**/*.war'
+            }
+        }
 
     }
 }
